@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:padding="15sp"
+    tools:context=".ListActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/app_about"
+            android:src="@drawable/ic_baseline_menu_24"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/calendar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15sp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/calendar"
+            app:layout_constraintBottom_toBottomOf="@id/menu"
+            app:layout_constraintLeft_toRightOf="@id/menu"
+            app:layout_constraintTop_toTopOf="@id/menu" />
+
+        <TextView
+            android:id="@+id/infoText"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/calendar"
+            app:layout_constraintLeft_toRightOf="@id/calendar"
+            app:layout_constraintTop_toTopOf="@id/calendar" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn1"
+            android:layout_width="175dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardBackgroundColor="#47A4FD"
+            app:cardCornerRadius="200sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/menu">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/book_now"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+        <CalendarView
+            android:id="@+id/calendar_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#5BFFFFFF"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn1" />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Choose Service: "
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/calendar_view" />
+
+        <TextView
+            android:id="@+id/menu1"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#D32F2F"
+            android:gravity="center"
+            android:paddingHorizontal="25sp"
+            android:paddingVertical="5dp"
+            android:text="Hair Cut"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/menu2"
+            app:layout_constraintTop_toBottomOf="@id/tv" />
+
+        <TextView
+            android:id="@+id/menu2"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#47A4FD"
+            android:gravity="center"
+            android:paddingHorizontal="25sp"
+            android:paddingVertical="5dp"
+            android:text="Hair Styling"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/menu1"
+            app:layout_constraintLeft_toRightOf="@id/menu1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv" />
+
+        <TextView
+            android:id="@+id/menu3"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#D32F2F"
+            android:gravity="center"
+            android:paddingHorizontal="25sp"
+            android:paddingVertical="5dp"
+            android:text="Beard Trimming"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/menu4"
+            app:layout_constraintTop_toBottomOf="@id/menu1" />
+
+        <TextView
+            android:id="@+id/menu4"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#47A4FD"
+            android:gravity="center"
+            android:paddingHorizontal="25sp"
+            android:paddingVertical="5dp"
+            android:text="Creambath"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toRightOf="@id/menu3"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/menu2" />
+
+        <TextView
+            android:id="@+id/menu5"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#D32F2F"
+            android:gravity="center"
+            android:paddingHorizontal="25sp"
+            android:paddingVertical="5dp"
+            android:text="Hair Washing"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/menu6"
+            app:layout_constraintTop_toBottomOf="@id/menu3" />
+
+        <TextView
+            android:id="@+id/menu6"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#47A4FD"
+            android:gravity="center"
+            android:paddingHorizontal="25sp"
+            android:paddingVertical="5dp"
+            android:text="Shaving"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toRightOf="@id/menu5"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/menu4" />
+
+        <TextView
+            android:id="@+id/menu7"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#D32F2F"
+            android:gravity="center"
+            android:paddingHorizontal="25sp"
+            android:paddingVertical="5dp"
+            android:text="Hair Painting"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/menu8"
+            app:layout_constraintTop_toBottomOf="@id/menu5" />
+
+        <TextView
+            android:id="@+id/menu8"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#47A4FD"
+            android:gravity="center"
+            android:paddingHorizontal="25sp"
+            android:paddingVertical="5dp"
+            android:text="Hair Care"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toRightOf="@id/menu7"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/menu6" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>
